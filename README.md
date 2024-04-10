@@ -24,10 +24,10 @@ Para os empregadores, oferecemos uma maneira fácil e eficaz de publicar vagas v
 
 ## 📱 Responsividade (Home, Vagas, Chat e Comunidades)
 
- <img src="https://i.imgur.com/rY7Fk9j.png" alt="Tela home, com feed de publicações" width="40%" height="40%"/> <img src="https://i.imgur.com/tFsnXgY.png" alt="Tela de vagas" width="40%" height="40%"/>
+ <img src="https://i.imgur.com/rY7Fk9j.png" alt="Tela home, com feed de publicações" width="45%" height="40%"/> <img src="https://i.imgur.com/tFsnXgY.png" alt="Tela de vagas" width="45%" height="40%"/>
  <br>
  <br>
- <img src="https://i.imgur.com/lD68GTs.png" alt="Tela de chat" width="40%" height="40%"/> <img src="https://i.imgur.com/2F8kZmn.png" alt="Tela de comunidades, com VLibras ativado" width="40%" height="40%"/>
+ <img src="https://i.imgur.com/lD68GTs.png" alt="Tela de chat" width="45%" height="50%"/> <img src="https://i.imgur.com/2F8kZmn.png" alt="Tela de comunidades, com VLibras ativado" width="45%" height="40%"/>
  
 ## 🔎 Avaliação de acessibilidade (WAVE Evaluation):
 <img src="https://i.imgur.com/lnpYEkR.png" alt="Resultado avaliação do WAVE Evaluation" width="50%"/>

@@ -1,8 +1,36 @@
-# React + Vite
+<h1 align="center">
+   DiversiFind - Frontend
+</h1>
+                                                                                         
+<h2 align="center">
+    Uma aplicação web para incluir pessoas com deficiência no mercado de trabalho            
+</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  🔽 Veja funcionando: [DiversiFind](https://diversifind.netlify.app/)
 
-Currently, two official plugins are available:
+## 📖 Sobre o projeto 
+O DiversiFind surge como uma aplicação web acessível que facilita a integração entre vagas para PCDs e candidatos, contribuindo para reduzir a lacuna existente entre vagas destinadas à pessoas com deficiência e pessoas à procura de emprego.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Com uma interface intuitiva e acessível, o DiversiFind simplifica o processo de busca e candidatura a empregos para PCDs. Nosso objetivo é fornecer uma plataforma inclusiva que capacite tanto os empregadores quanto os candidatos, criando um ambiente de trabalho mais diversificado e inclusivo.
+
+Para os empregadores, oferecemos uma maneira fácil e eficaz de publicar vagas voltadas para PCDs e acessar um pool diversificado de talentos. Para os candidatos, o DiversiFind oferece uma gama de ferramentas e recursos para encontrar as oportunidades certas e se destacar no processo de recrutamento. Desde a criação de perfis personalizados até a busca por novas vagas e comunidades destinadas a este propósito, estamos aqui para apoiar os candidatos em cada passo do caminho.
+
+<img src="https://i.imgur.com/8uyhcQi.png" alt="Página de login" width="80%"/>
+
+## 🛠️ Tencologias utilizadas
+ - ReactJs
+ - React Query
+ - React hook form
+
+## 📱 Responsividade (Home, Vagas, Chat e Comunidades)
+
+ <img src="https://i.imgur.com/rY7Fk9j.png" alt="Tela home, com feed de publicações" width="40%" height="40%"/> <img src="https://i.imgur.com/tFsnXgY.png" alt="Tela de vagas" width="40%" height="40%"/>
+ <br>
+ <br>
+ <img src="https://i.imgur.com/lD68GTs.png" alt="Tela de chat" width="40%" height="40%"/> <img src="https://i.imgur.com/2F8kZmn.png" alt="Tela de comunidades, com VLibras ativado" width="40%" height="40%"/>
+ 
+## 🔎 Avaliação de acessibilidade (WAVE Evaluation):
+<img src="https://i.imgur.com/lnpYEkR.png" alt="Resultado avaliação do WAVE Evaluation" width="50%"/>
+
+##
+👨‍💻 Desenvolvido por [Francisco Braz](https://github.com/FranciscoBraaz)

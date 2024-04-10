@@ -15,7 +15,7 @@ Com uma interface intuitiva e acessível, o DiversiFind simplifica o processo de
 
 Para os empregadores, oferecemos uma maneira fácil e eficaz de publicar vagas voltadas para PCDs e acessar um pool diversificado de talentos. Para os candidatos, o DiversiFind oferece uma gama de ferramentas e recursos para encontrar as oportunidades certas e se destacar no processo de recrutamento. Desde a criação de perfis personalizados até a busca por novas vagas e comunidades destinadas a este propósito, estamos aqui para apoiar os candidatos em cada passo do caminho.
 
-<img src="https://i.imgur.com/8uyhcQi.png" alt="Página de login" width="80%"/>
+<img src="https://i.imgur.com/8uyhcQi.png" alt="Página de login" width="100%"/>
 
 ## 🛠️ Tencologias utilizadas
  - ReactJs

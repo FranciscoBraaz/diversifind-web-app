@@ -21,6 +21,7 @@ Para os empregadores, oferecemos uma maneira fácil e eficaz de publicar vagas v
  - ReactJs
  - React Query
  - React hook form
+ - Socket.io
 
 ## 📱 Responsividade (Home, Vagas, Chat e Comunidades)
 

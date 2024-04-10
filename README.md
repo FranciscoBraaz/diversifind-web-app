@@ -30,7 +30,7 @@ Para os empregadores, oferecemos uma maneira fácil e eficaz de publicar vagas v
  <img src="https://i.imgur.com/lD68GTs.png" alt="Tela de chat" width="45%" height="50%"/> <img src="https://i.imgur.com/2F8kZmn.png" alt="Tela de comunidades, com VLibras ativado" width="45%" height="40%"/>
  
 ## 🔎 Avaliação de acessibilidade (WAVE Evaluation):
-<img src="https://i.imgur.com/lnpYEkR.png" alt="Resultado avaliação do WAVE Evaluation" width="50%"/>
+<img src="https://i.imgur.com/lnpYEkR.png" alt="Resultado avaliação do WAVE Evaluation" width="70%"/>
 
 ##
 👨‍💻 Desenvolvido por [Francisco Braz](https://github.com/FranciscoBraaz)

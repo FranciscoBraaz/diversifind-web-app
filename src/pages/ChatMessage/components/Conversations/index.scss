@@ -1,0 +1,141 @@
+@import "../../../../styles/variables.scss";
+
+.conversations {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 240px;
+
+  & > header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > h1 {
+      font-size: 20px;
+    }
+  }
+
+  & > p {
+    font-size: 14px;
+    color: $black-600;
+  }
+}
+
+.conversations__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conversations__conversation-item {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+
+  & > button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 4px 8px;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $black-300;
+    }
+  }
+
+  & .conversations__user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    & > header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      min-width: 0;
+      width: 100%;
+      max-width: 171px;
+
+      & > h2 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #007674;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+    }
+
+    & > p {
+      font-size: 12px;
+      color: $black-800;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &--active {
+    & > button {
+      background-color: $main-sm;
+      transition: filter 0.3s ease;
+
+      &:hover {
+        background-color: $main-sm;
+        filter: brightness(0.9);
+      }
+    }
+
+    & .conversations__user-info {
+      & > header {
+        & > h2 {
+          color: #0b5752;
+        }
+
+        & > p {
+          color: $black-700;
+        }
+      }
+
+      & > p {
+        color: #0b5752;
+      }
+    }
+
+    & .conversations__time {
+      color: $black-800 !important;
+    }
+  }
+}
+
+.conversations__time {
+  font-size: 12px;
+  color: $black-700;
+  font-weight: 500;
+  height: fit-content;
+  flex-shrink: 0;
+}
+
+.skeleton-conversations {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-conversation {
+  display: flex;
+  gap: 8px;
+}

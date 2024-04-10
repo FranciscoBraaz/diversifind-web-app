@@ -1,0 +1,151 @@
+@import "../../../../styles/variables.scss";
+
+.chat {
+  width: 100%;
+  background-color: $white;
+  height: calc(100vh - 128px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+
+  & > header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+
+    & h4 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $black-700;
+    }
+
+    & p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $black-600;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  & > footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+.chat__divider {
+  width: calc(100% - 32px);
+  height: 1px;
+  margin: 0px auto;
+  background-color: $black-300;
+}
+
+.chat__main {
+  margin: 16px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat__main__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    & > path {
+      stroke: $main-default;
+    }
+
+    & > circle {
+      stroke: $main-default;
+    }
+  }
+}
+
+.chat__messages-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+  padding: 16px;
+  margin-top: auto;
+  justify-content: flex-end;
+}
+
+.chat__input-container {
+  display: flex;
+  align-items: center;
+  background-color: $black-100;
+  padding: 0px 16px;
+  border-radius: 8px;
+
+  & > input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    min-height: 48px;
+  }
+}
+
+.chat__empty-container {
+  align-self: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+
+  & > p {
+    font-size: 20px;
+    font-weight: 500;
+    color: $black-700;
+    text-align: center;
+  }
+}
+
+.skeleton-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat__skeleton-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &--right {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .chat {
+    & > header {
+      & h4 {
+        font-size: 16px;
+      }
+
+      & p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .chat__empty-container {
+    & > svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

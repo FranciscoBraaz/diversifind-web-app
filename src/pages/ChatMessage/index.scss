@@ -1,0 +1,34 @@
+@import "../../styles/variables.scss";
+
+.chat-message {
+  width: 100%;
+}
+
+.chat-message-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.chat-message__wrapper-chat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (max-width: $screen-xl) {
+  .chat-message-container {
+    padding: 24px 16px;
+  }
+}

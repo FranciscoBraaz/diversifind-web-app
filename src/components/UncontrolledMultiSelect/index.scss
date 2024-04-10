@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.uncontrolled-multi-select__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: $secondary-default;
+  }
+}
+
+.uncontrolled-multi-select__control {
+  min-height: 40px !important;
+  height: fit-content !important;
+}

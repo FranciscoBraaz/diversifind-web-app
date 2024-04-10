@@ -1,0 +1,52 @@
+@import "../../../../styles/variables.scss";
+
+.help-item__accordion-trigger {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+
+  & > span {
+    color: $black-800;
+    font-weight: 600;
+    text-align: start;
+  }
+}
+
+.help-item__accordion-trigger-chevron {
+  color: var(--violet-10);
+  min-width: 24px;
+  transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.help-item__accordion-trigger[data-state="open"]
+  > .help-item__accordion-trigger-chevron {
+  transform: rotate(180deg);
+}
+
+.help-item__accordion-content {
+  & > p {
+    font-size: 16px;
+    color: $black-800;
+    margin-top: 16px;
+    color: $black-700;
+  }
+
+  & > ol {
+    list-style: disc;
+  }
+
+  & > ol > li {
+    font-size: 16px;
+    color: $black-800;
+    margin-top: 8px;
+    color: $black-700;
+
+    & > strong {
+      font-weight: 600;
+    }
+  }
+}

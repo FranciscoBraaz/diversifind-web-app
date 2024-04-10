@@ -1,0 +1,55 @@
+@import "../../../../styles/variables.scss";
+
+.jobs__filters {
+  width: 100%;
+  max-width: 255px;
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+
+  & > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    & > h2 {
+      font-size: 18px;
+      color: $black-800;
+      font-weight: 500;
+    }
+  }
+
+  & section > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+    & > h3 {
+      font-size: 16px;
+      color: $black-800;
+      font-weight: 500;
+    }
+  }
+}
+
+.jobs__filters__separator {
+  width: 100%;
+  height: 1px;
+  background-color: $black-400;
+  margin: 16px 0px;
+}
+
+.jobs__filters__sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.jobs__filters__format,
+.jobs__filters__origin {
+  & .form__checkbox--container {
+    height: 32px !important;
+  }
+}

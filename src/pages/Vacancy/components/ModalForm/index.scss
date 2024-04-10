@@ -1,0 +1,81 @@
+@import "../../../../styles/variables.scss";
+
+.candidature__modal-form__dialog-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 24px;
+  gap: 16px;
+
+  & > h2 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: $black-800;
+  }
+
+  & > button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & > svg {
+      color: $black-600;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      & > svg {
+        color: $black-800;
+      }
+    }
+  }
+}
+
+.candidature__modal-form__dialog-content {
+  padding: 16px 0px;
+  height: 100%;
+}
+
+.candidature__modal-form__dialog-content__form {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 16px);
+
+  & > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 24px 8px 24px;
+    overflow-y: auto;
+  }
+}
+
+.candidature__modal-form__dialog-content__buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px 24px 0px 24px;
+  border-top: 1px solid $black-300;
+}
+
+.candidature__modal-form__dialog-content__form__container-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    color: $black-700;
+  }
+
+  & > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

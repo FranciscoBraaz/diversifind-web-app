@@ -1,0 +1,60 @@
+@import "../../../../styles/variables.scss";
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+}
+
+.experience-item__info-container {
+  width: 100%;
+  max-width: 70%;
+}
+
+.experience-item__occupation {
+  font-size: 18px;
+  color: $black-800;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.experience-item__company {
+  font-size: 16px;
+  color: $black-700;
+}
+
+.experience-item__period {
+  font-size: 14px;
+  color: $black-600;
+  text-transform: capitalize;
+}
+
+.experience-item__location-type {
+  display: flex;
+  gap: 4px;
+
+  & > p {
+    font-size: 14px;
+    color: $black-600;
+  }
+}
+
+.experience-item__description {
+  margin-left: 40px;
+  font-size: 14px;
+  color: $black-700;
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .experience-item__info-container {
+    max-width: 65%;
+  }
+}

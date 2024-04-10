@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.unlimited-textarea-label {
+  font-size: 14px;
+  color: $black-800;
+}
+
+.unlimited-textarea-wrapper {
+  display: grid;
+
+  &::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+  }
+
+  & > textarea,
+  &::after {
+    /* Identical styling required!! */
+    resize: none;
+    border: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0.25px;
+    color: $black-700;
+    overflow: hidden;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}

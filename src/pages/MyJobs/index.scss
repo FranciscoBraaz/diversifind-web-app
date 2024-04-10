@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+
+.my-jobs {
+  width: 100%;
+}
+
+.my-jobs-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.my-jobs__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.my-jobs__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.my-jobs__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: $white;
+  border-radius: 8px 8px 0px 0px;
+}
+
+@media screen and (max-width: $screen-xl) {
+  .my-jobs-container {
+    padding: 24px 16px;
+  }
+
+  .my-jobs__header > h2 {
+    font-size: 20px;
+  }
+}

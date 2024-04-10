@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.chip {
+  padding: 2px 6px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  max-width: fit-content;
+  font-size: 12px;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

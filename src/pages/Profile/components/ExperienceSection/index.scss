@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.scss";
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & > p {
+      font-size: 15px;
+      color: $black-800;
+    }
+  }
+}
+
+.experience-section__action-buttons {
+  display: flex;
+  gap: 16px;
+}

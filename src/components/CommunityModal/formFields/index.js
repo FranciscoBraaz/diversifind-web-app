@@ -1,0 +1,66 @@
+import { listProfessionalArea } from "../../../services/professionalAreaService"
+import { getSkillsByProfessionalArea } from "../../../services/skillService"
+
+export const communityFields = [
+  {
+    name: "name",
+    label: "Nome",
+    type: "text",
+    placeholder: "Nome da comunidade",
+    required: true,
+  },
+  {
+    name: "description",
+    label: "Descrição",
+    type: "textarea",
+    hasLabel: true,
+    placeholder: "Fale um pouco sobre a comunidade...",
+    rows: 4,
+    required: false,
+  },
+  {
+    name: "platform",
+    type: "select",
+    placeholder: "Selecione",
+    label: "Plataforma",
+    options: [
+      { value: "whatsapp", label: "Whatsapp" },
+      { value: "telegram", label: "Telegram" },
+      { value: "discord", label: "Discord" },
+      { value: "facebook", label: "Facebook" },
+      { value: "linkedin", label: "Linkedin" },
+      { value: "reddit", label: "Reddit" },
+      { value: "outros", label: "Outros" },
+    ],
+    required: true,
+  },
+  {
+    name: "professionalArea",
+    type: "select",
+    placeholder: "Selecione",
+    label: "Área",
+    options: [],
+    required: true,
+    dependencyFor: ["skills"],
+    getOptions: listProfessionalArea,
+    route: "list",
+  },
+  {
+    name: "skills",
+    type: "multi-select",
+    placeholder: "Selecione",
+    label: "Competências",
+    options: [],
+    required: false,
+    dependentOn: "professionalArea",
+    getOptions: getSkillsByProfessionalArea,
+    route: "get-by-professional-area/paramValue",
+  },
+  {
+    name: "link",
+    label: "Link",
+    type: "text",
+    placeholder: "Link da comunidade",
+    required: true,
+  },
+]

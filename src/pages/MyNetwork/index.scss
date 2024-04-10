@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+
+.my-network {
+  width: 100%;
+}
+
+.my-network__container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.my-network__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.my-network__users-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-content: stretch;
+
+  & > .profile-card {
+    height: 100%;
+  }
+}
+
+.my-network__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.my-network__list-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: $black-800;
+}
+
+.skeleton-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: $white;
+  padding: 16px;
+  width: 100%;
+  max-width: 275px;
+  border-radius: 8px;
+
+  & > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.skeleton-users {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-content: stretch;
+}
+
+@media screen and (max-width: $screen-xl) {
+  .my-network__container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .my-network__users-list,
+  .skeleton-users {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .my-network__users-list,
+  .skeleton-users {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .my-network__buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .my-network__users-list,
+  .skeleton-users {
+    grid-template-columns: 1fr;
+  }
+}

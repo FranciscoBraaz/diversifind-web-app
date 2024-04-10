@@ -1,0 +1,93 @@
+@import "../../styles/variables.scss";
+
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  gap: 16px;
+  background-color: $black-100;
+  min-height: 100vh;
+  position: relative;
+
+  & > h1,
+  & > h2 {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 28px;
+  }
+
+  & > h2 {
+    font-size: 24px;
+  }
+}
+
+.help__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & > span {
+    font-size: 20px;
+    font-weight: 600;
+    color: $secondary-default;
+  }
+
+  & > svg {
+    height: 40px;
+    width: auto;
+    min-height: 40px;
+  }
+}
+
+.help__about {
+  width: 100%;
+  max-width: 600px;
+}
+
+.help__contact {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 600;
+  margin-top: 24px;
+
+  & > span {
+    color: $main-default;
+  }
+}
+
+.help-svg {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 260px;
+}
+
+.disability-svg {
+  position: fixed;
+  right: 5%;
+  top: 15%;
+  width: 100%;
+  max-width: 260px;
+}
+
+.help__list-items {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (max-width: $screen-xxl) {
+  .help-svg,
+  .disability-svg {
+    display: none;
+  }
+}

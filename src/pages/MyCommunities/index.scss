@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.my-communities {
+  width: 100%;
+}
+
+.my-communities-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.my-communities__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.my-communities__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.my-communities__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: $white;
+  border-radius: 8px 8px 0px 0px;
+}
+
+@media screen and (max-width: $screen-xxl) {
+  .my-communities-container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .my-communities__header > h2 {
+    font-size: 20px;
+  }
+}

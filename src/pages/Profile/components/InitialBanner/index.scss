@@ -1,0 +1,138 @@
+@import "../../../../styles/variables.scss";
+
+.initial-banner {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  & > footer {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}
+
+.initial-banner__profile-info {
+  max-width: 60%;
+
+  & > h1 {
+    font-size: 28px;
+    line-height: 32px;
+    color: $black-800;
+  }
+
+  & > p:first-child {
+    font-size: 16px;
+    color: $black-700;
+  }
+
+  & > p:last-child {
+    font-size: 14px;
+    color: $black-600;
+  }
+}
+
+.initial-banner__infos-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  & > button {
+    margin-left: auto;
+    align-self: flex-start;
+  }
+
+  & .avatar {
+    width: 110px !important;
+    height: 110px !important;
+    min-width: 110px !important;
+    min-height: 110px !important;
+  }
+}
+
+.initial-banner__action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-left: auto;
+
+  & > button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.initial-banner__interests {
+  display: flex;
+  gap: 8px;
+
+  & > p {
+    color: $black-800;
+    border: 1px solid $black-800;
+    padding: 8px 16px;
+    border-radius: 8px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.initial-banner__input-file {
+  opacity: 0;
+  max-width: 1px;
+  max-height: 1px;
+  margin-top: -1px;
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: $screen-md) {
+  .initial-banner__infos-container {
+    align-items: flex-start;
+
+    & .avatar {
+      width: 80px !important;
+      height: 80px !important;
+      min-width: 80px !important;
+      min-height: 80px !important;
+    }
+  }
+
+  .initial-banner__profile-info {
+    & > h1 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .initial-banner__infos-container {
+    flex-direction: column;
+    align-items: center;
+
+    & > button {
+      margin-bottom: -8px;
+    }
+  }
+
+  .initial-banner__profile-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .initial-banner > footer {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  .initial-banner__action-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+}

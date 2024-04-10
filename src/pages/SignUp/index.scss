@@ -1,0 +1,67 @@
+@import "../../styles/variables.scss";
+
+.sign-up {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  & form {
+    height: 70%;
+  }
+}
+
+.sign-up__container-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  // margin-top: 16px;
+  max-width: 400px;
+  padding: 0 32px;
+
+  & > button {
+    width: fit-content;
+  }
+}
+
+.sign-up__container-inputs {
+  max-height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &::-webkit-scrollbar {
+    display: block;
+    background: transparent;
+    width: 18px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $black-300;
+  }
+}
+
+.sign-up__profile-type {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > p {
+    font-size: 18px;
+    font-weight: 500;
+    color: $secondary-default;
+  }
+}
+
+.sign-up__success-message__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}

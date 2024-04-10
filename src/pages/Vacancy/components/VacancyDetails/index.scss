@@ -1,0 +1,14 @@
+@import "../../../../styles/variables.scss";
+
+.vacancy-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > section {
+    background-color: $white;
+    padding: 16px;
+    border-radius: 8px;
+  }
+}

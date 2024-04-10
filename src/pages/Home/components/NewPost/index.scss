@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.scss";
+
+.new-post {
+  background-color: $white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+
+  & > button {
+    background-color: transparent;
+    border: 1px solid $black-600;
+    padding: 0px 8px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: start;
+    color: $black-600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

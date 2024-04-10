@@ -1,0 +1,41 @@
+@import "../../../../styles/variables.scss";
+
+.search-jobs {
+  width: 100%;
+  display: flex;
+  background-color: $white;
+  position: relative;
+  border-radius: 8px;
+
+  & > input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 16px;
+    color: $black-800;
+    font-weight: 500;
+  }
+
+  & > button {
+    background-color: $main-default;
+    border: none;
+    padding: 0px 16px;
+    transition: filter 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(0.9);
+    }
+
+    & > svg {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../../styles/variables.scss";
+
+.accessibility-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > h2 {
+    color: $black-800;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+.accessibility-info__selective-process,
+.accessibility-info__work,
+.accessibility-info__accommodation {
+  & > h6 {
+    font-size: 16px;
+    color: $black-800;
+    margin-bottom: 16px;
+  }
+
+  & > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: $black-800;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .accessibility-info__selective-process,
+  .accessibility-info__work {
+    & .form__checkbox__label-container {
+      & > label {
+        white-space: nowrap;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .accessibility-info__accommodation {
+    & .form__checkbox__label-container {
+      & > label {
+        font-size: 13px;
+      }
+    }
+  }
+}

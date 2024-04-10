@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.form-button {
+  height: 40px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  // transition: filter 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: $main-default;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+
+  &--contained {
+    background-color: $main-default;
+    color: $white;
+  }
+
+  &--outlined {
+    background-color: $white;
+    color: $main-default;
+    border: 1px solid $main-default;
+  }
+
+  &--disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+    border: 1px solid $main-default;
+  }
+
+  & > span {
+    width: 20px;
+    height: 20px;
+
+    &.form-button__left-icon {
+      margin-left: -6px;
+    }
+
+    &.form-button__right-icon {
+      margin-right: -6px;
+    }
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

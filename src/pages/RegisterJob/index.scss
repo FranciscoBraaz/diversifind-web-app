@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+
+.register-job {
+  width: 100%;
+}
+
+.register-job__container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.register-job__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+
+  & > header {
+    border-bottom: 1px solid $black-300;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > div:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  & h1 {
+    color: $black-800;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.register-job__step-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.register-job__skeleton-body {
+  & > header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.register-job__skeleton-body__step {
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.register-job__container-title {
+  display: flex;
+  gap: 8px;
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border-radius: 50%;
+    color: $black-700;
+    height: 32px;
+
+    &:hover {
+      cursor: pointer;
+      color: $black-800;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xl) {
+  .register-job__container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .register-job__main {
+    & > header {
+      & > div:first-child {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    & h1 {
+      font-size: 24px;
+    }
+  }
+}

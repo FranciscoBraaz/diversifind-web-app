@@ -1,0 +1,54 @@
+@import "../../../../styles/variables.scss";
+
+.academic-education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+}
+
+.academic-education-item__info-container {
+  width: 100%;
+  max-width: 70%;
+}
+
+.academic-education-item__course {
+  font-size: 18px;
+  color: $black-800;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.academic-education-item__institution {
+  font-size: 16px;
+  color: $black-700;
+}
+
+.academic-education-item__period {
+  font-size: 14px;
+  color: $black-600;
+  text-transform: capitalize;
+}
+
+.academic-education-item__type {
+  font-size: 14px;
+  color: $black-600;
+}
+
+.academic-education-item__description {
+  margin-left: 40px;
+  font-size: 14px;
+  color: $black-700;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .academic-education-item__info-container {
+    max-width: 65%;
+  }
+}

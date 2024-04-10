@@ -1,0 +1,104 @@
+@import "../../styles/variables.scss";
+
+.home {
+  width: 100%;
+}
+
+.home-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.home__feed {
+  // margin: 0 auto;
+  width: 100%;
+  // max-width: 555px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home__feed__suggestions {
+  font-size: 14px;
+  font-weight: 500;
+  color: $black-800;
+  margin-bottom: -8px;
+}
+
+.post__skeleton {
+  width: 100%;
+  max-width: 558px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  & > footer {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+
+    & > div {
+      width: 30%;
+    }
+  }
+}
+
+.home__widgets-container {
+  width: 100%;
+  max-width: 275px;
+  // height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.skeleton-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: $white;
+  padding: 16px;
+  max-width: 275px;
+  border-radius: 8px;
+
+  & > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: $screen-xxl) {
+  .home-container {
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .home__feed {
+    width: 100%;
+    max-width: 558px;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .home__widgets-container {
+    display: none;
+  }
+}

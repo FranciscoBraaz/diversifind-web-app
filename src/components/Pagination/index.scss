@@ -1,0 +1,83 @@
+@import "../../styles/variables.scss";
+
+.pagination-container {
+  width: 100%;
+  background-color: $white;
+  border: 2px solid $black-50;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+
+  li {
+    width: 32px;
+    height: 32px;
+    border: 2px solid $black-200;
+    border-radius: 4px;
+    color: $black-800;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 1px;
+    -webkit-user-select: none;
+    user-select: none;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &:not(.next, .previous) {
+      & a {
+        margin-top: 1px;
+      }
+    }
+
+    &:hover {
+      border: 2px solid $main-default;
+    }
+
+    svg {
+      color: $black-800;
+      padding: 0;
+      cursor: pointer;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  li.pagination__active {
+    border: 2px solid $main-default;
+  }
+}
+
+.pagination__break-me {
+  pointer-events: none;
+}
+
+@media screen and (min-width: $screen-md) {
+  .pagination-container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .pagination {
+    li {
+      margin: 0 4px;
+    }
+  }
+}

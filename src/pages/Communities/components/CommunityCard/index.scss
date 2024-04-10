@@ -1,0 +1,119 @@
+@import "../../../../styles/variables.scss";
+
+.community-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $black-800;
+    }
+
+    & p {
+      font-size: 14px;
+      color: $black-600;
+    }
+  }
+
+  & > main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > p {
+      font-size: 14px;
+      color: $black-700;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.community-card__container-buttons {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+
+  & .form-button--disabled {
+    opacity: 1 !important;
+  }
+}
+
+.community-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.community-card__actions-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $black-200;
+    }
+
+    & > svg {
+      color: $black-700;
+    }
+  }
+}
+
+.community-card__rating-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  & > p {
+    font-size: 16px !important;
+    color: $black-700;
+    margin-top: -4px;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .community-card {
+    & > header {
+      & > div {
+        & > span {
+          font-size: 14px;
+          color: $black-600;
+        }
+      }
+
+      & p {
+        display: none;
+      }
+    }
+  }
+}

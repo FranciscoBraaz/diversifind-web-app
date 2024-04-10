@@ -1,0 +1,54 @@
+@import "../../../../styles/variables.scss";
+
+.certificate-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+}
+
+.certificate-item__info-container {
+  width: 100%;
+  max-width: 70%;
+}
+
+.certificate-item__name {
+  font-size: 18px;
+  color: $black-800;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.certificate-item__institution {
+  font-size: 16px;
+  color: $black-700;
+}
+
+.certificate-item__period {
+  font-size: 14px;
+  color: $black-600;
+}
+
+.certificate-item__show-certificate {
+  width: fit-content;
+  height: 32px;
+  border-radius: 16px;
+  margin-top: 4px;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .certificate-item__info-container {
+    max-width: 65%;
+
+    & > .form-button {
+      font-size: 13px !important;
+      padding: 10px 12px !important;
+    }
+  }
+}

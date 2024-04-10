@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.text-link {
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 500;
+  color: $main-default;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.9);
+    text-decoration: underline;
+  }
+}

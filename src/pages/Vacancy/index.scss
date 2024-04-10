@@ -1,0 +1,236 @@
+@import "../../styles/variables.scss";
+
+.vacancy {
+  width: 100%;
+}
+
+.vacancy-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.vacancy__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  & > section {
+    background-color: $white;
+    padding: 16px;
+    border-radius: 8px;
+  }
+}
+
+.vacancy__initial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > header {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}
+
+.vacancy__occupation-info {
+  & > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+
+    & > h3 {
+      font-size: 18px;
+      color: $main-default;
+    }
+
+    & > svg {
+      color: $main-default;
+      min-width: 24px;
+      min-height: 24px;
+    }
+  }
+}
+
+.vacancy__occupation-info__container-title {
+  display: flex;
+  align-items: flex-start;
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border-radius: 50%;
+    color: $black-700;
+    height: 32px;
+
+    &:hover {
+      cursor: pointer;
+      color: $black-800;
+    }
+  }
+
+  & > h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $black-800;
+  }
+}
+
+.vacancy__location-contract-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    & > span {
+      font-size: 16px;
+      color: $black-800;
+    }
+  }
+}
+
+.vacancy__skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vacancy__footer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+
+  & > button {
+    align-self: flex-end;
+  }
+}
+
+.vacancy__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $black-800;
+  }
+
+  & > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black-800;
+    white-space: pre-line;
+  }
+}
+
+.vacancy__acessibility {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $black-800;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > p {
+      font-size: 16px;
+      font-weight: 500;
+      color: $black-800;
+    }
+
+    & > ul {
+      list-style: disc;
+      padding-left: 18px;
+
+      & > li {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.vacancy__skeleton-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > section {
+    background-color: $white;
+    padding: 16px;
+    border-radius: 8px;
+  }
+}
+
+.vacancy__skeleton-body__initial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vacancy__skeleton-body__initial-info__header {
+  display: flex;
+  justify-content: space-between;
+
+  & > div:first-child {
+    width: 100%;
+  }
+}
+
+.vacancy__skeleton-body__initial-info__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vacancy__skeleton-body__accessibility {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (max-width: $screen-xl) {
+  .vacancy-container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .vacancy__initial-info {
+    & > header {
+      flex-direction: column;
+    }
+  }
+
+  .vacancy__skeleton-body__initial-info__header {
+    flex-direction: column;
+  }
+
+  .vacancy__skeleton-body__initial-info__footer {
+    flex-direction: column;
+
+    & > div:last-child {
+      align-self: flex-end;
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+
+.uncontrolled-input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & > label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: $secondary-default;
+  }
+}
+
+.uncontrolled-input {
+  height: 44px;
+  border: 1px solid $secondary-xsm;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  color: $secondary-default;
+  margin: 8px 0px;
+
+  &::placeholder {
+    color: $black-500;
+  }
+
+  &:focus {
+    border: 2px solid $main-default;
+    padding: 10px 13px;
+  }
+
+  &--password {
+    &::placeholder {
+      margin-top: 1px;
+    }
+  }
+
+  &--error {
+    border: 2px solid $error-default;
+  }
+}
+
+.uncontrolled-input__error-message {
+  color: $error-lg;
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+  margin-bottom: -8px;
+}
+
+.uncontrolled-input__eye-off,
+.uncontrolled-input__eye-on {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 12px;
+  cursor: pointer;
+  color: $black-500;
+  background-color: transparent;
+  border: none;
+}
+
+.uncontrolled-input__eye-on {
+  color: $black-700;
+}

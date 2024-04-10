@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.loading-dialog__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  gap: 8px;
+
+  & > p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  & > svg {
+    stroke: $main-default;
+  }
+}

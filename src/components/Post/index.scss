@@ -1,0 +1,291 @@
+@import "../../styles/variables.scss";
+
+.post {
+  width: 100%;
+  max-width: 558px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 16px 16px 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  & > header {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.post__user-info {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(75% - 28px);
+
+  & .dropdown__trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 16px;
+    margin-right: 6px;
+    background-color: transparent;
+    border: none;
+
+    & > svg {
+      color: $black-600;
+      width: 22px;
+      height: 22px;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & > svg {
+        color: $black-800;
+      }
+    }
+  }
+}
+
+.post__user-info__name {
+  font-size: 16px;
+  font-weight: 500;
+  color: $black-800;
+  line-height: 19px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.post__user-info__desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: $black-600;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post__user-info__time {
+  font-size: 12px;
+  font-weight: 400;
+  color: $black-600;
+}
+
+.post__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black-800;
+  }
+}
+
+.post__content__container-media {
+  display: grid;
+
+  & > div {
+    grid-area: 1/1;
+    min-width: 100%;
+    max-width: 555px;
+    height: 360px;
+  }
+
+  & .react-loading-skeleton {
+    height: 100%;
+  }
+
+  & > img {
+    width: 100%;
+    max-width: 555px;
+    border-radius: 4px;
+    // max-height: 360px;
+  }
+}
+
+.post__reactions {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+
+  & > div,
+  & > button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  & > button {
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+
+      & > span,
+      & > svg {
+        transition: color 0.3s ease;
+        color: $black-800;
+      }
+    }
+  }
+
+  & span {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black-600;
+    margin-top: 2px;
+  }
+
+  & svg {
+    width: 16px;
+    color: $black-600;
+  }
+}
+
+.post__actions {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  border-top: 1px solid $black-100;
+  padding: 8px 0px;
+}
+
+.post__actions__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.post__actions__like,
+.post__actions__comment {
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $black-100;
+  }
+}
+
+.post__actions__like {
+  & > svg {
+    width: 20px;
+    color: $black-800;
+  }
+
+  &--liked {
+    color: $main-default;
+
+    & > svg {
+      color: $main-default;
+      fill: $main-default;
+    }
+  }
+}
+
+.post__actions__comment {
+  & > svg {
+    width: 20px;
+    color: $black-800;
+  }
+}
+
+.commentary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commentary-section__comments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commentary-section__show-more {
+  width: fit-content;
+  align-self: flex-end;
+  color: $main-default;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $black-50;
+  }
+}
+
+.skeleton-comment {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+
+  &__area {
+    width: 100%;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    height: 60px;
+  }
+}
+
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-comment {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+
+  & .textarea-wrapper {
+    width: 100%;
+  }
+}
+
+.form-comment__button-submit {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: $main-default;
+  color: $white;
+  align-self: flex-end;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .post__reactions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .post__actions__buttons {
+    justify-content: center;
+  }
+}

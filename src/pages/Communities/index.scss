@@ -1,0 +1,153 @@
+@import "../../styles/variables.scss";
+
+.communities {
+  width: 100%;
+}
+
+.communities-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+
+  & > main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.communities__card-container {
+  width: 100%;
+  background-color: $white;
+  border-radius: 8px 8px 0px 0px;
+  padding: 16px;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1 {
+      font-size: 18px;
+      color: $black-800;
+      font-weight: 500;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.communities__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.communities__divider {
+  width: 100%;
+  height: 1px;
+  background-color: $black-400;
+  margin: 16px 0px;
+}
+
+.communities__skeleton-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.skeleton-community-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+
+  &:not(.skeleton-community-card--last) {
+    border-bottom: 1px solid $black-200;
+  }
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+
+    & > div:first-child {
+      width: 100%;
+    }
+  }
+}
+
+.skeleton-community-card__inner-header-container {
+  width: 100%;
+
+  & > div {
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+  }
+}
+
+.communities__container-search-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.communities__mobile-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media screen and (max-width: $screen-xxl) {
+  .communities-container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .communities__mobile-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

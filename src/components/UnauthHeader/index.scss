@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.unauth-header {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  // margin-top: 54px;
+  padding: 0 32px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.unauth-header__back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $main-default;
+  border-radius: 50%;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  & > svg {
+    color: $main-default;
+  }
+}

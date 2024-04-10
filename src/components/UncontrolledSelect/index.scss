@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss";
+
+.select-trigger__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: $secondary-default;
+  }
+
+  &[data-disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+
+    & > button {
+      color: $black-500;
+
+      & > span {
+        color: $black-500;
+      }
+    }
+  }
+
+  &[data-state="open"] {
+    & .select-trigger {
+      border: 1px solid $main-default;
+      box-shadow: 0 0 0 1px $main-default;
+    }
+
+    & .select-icon {
+      color: $main-default;
+    }
+  }
+}
+
+.select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 1;
+  min-height: 40px;
+  height: 40px;
+  width: 100%;
+  gap: 5px;
+  background-color: transparent;
+  border: 1px solid $secondary-xsm;
+  color: $secondary-default;
+
+  &:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: 1px solid $main-default;
+    box-shadow: 0 0 0 1px $main-default;
+
+    & .select-icon {
+      color: $main-default !important;
+    }
+  }
+
+  & > span:first-child {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $black-800;
+  }
+
+  & > span:last-child {
+    display: flex;
+  }
+}
+
+.select-icon {
+  font-weight: 500;
+  color: $black-500;
+}
+
+.select-content {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  max-height: 40vh;
+}
+
+.select-viewport {
+  padding: 5px;
+}
+
+.select-item {
+  font-size: 14px;
+  line-height: 1;
+  color: $main-default;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  // padding: 0 35px 0 25px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  & > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.select-item[data-disabled] {
+  color: var(--mauve-8);
+  pointer-events: none;
+}
+
+.select-item[data-highlighted] {
+  outline: none;
+  background-color: $main-sm;
+  color: $main-lg;
+}
+
+.select-scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: $main-sm;
+  color: $secondary-default;
+  cursor: default;
+}
+
+.uncontrolled-select__error-message {
+  color: $error-lg;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  margin-top: -5px;
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 5 !important;
+  pointer-events: all;
+}

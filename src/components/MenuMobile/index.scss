@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.menu-mobile__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+  border-bottom: 1px solid $black-500;
+
+  & > h2 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #3b3b3b;
+  }
+
+  & > button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.menu-mobile__content {
+  overflow-y: auto;
+}

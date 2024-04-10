@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+
+.uncontrolled-select-default__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+
+  & > select {
+    appearance: none;
+    cursor: pointer;
+    height: 44px;
+    border: 1px solid #d0d5dd;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    color: #344054;
+
+    &:hover {
+      border: 1px solid $black-400;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: $black-50;
+      color: $black-500;
+
+      &:hover {
+        border: 1px solid $black-300;
+      }
+    }
+
+    &:focus:not(.form__input--read-only) {
+      border: 2px solid $main-default;
+    }
+  }
+
+  &--disabled {
+    & > select {
+      &:hover {
+        cursor: default;
+      }
+    }
+
+    & svg {
+      color: $black-400 !important;
+    }
+  }
+}
+
+.uncontrolled-select-default__arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: 14px;
+  transform: translateY(-50%);
+  transition: 0.3s linear;
+  pointer-events: none;
+
+  // .uncontrolled-select-default:active + & {
+  //   transform: translateY(-50%) rotate(-180deg);
+  //   color: black;
+  // }
+}
+
+.uncontrolled-select-default__error-message {
+  color: $error-lg;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  margin-top: -5px;
+}

@@ -1,0 +1,82 @@
+@import "../../../../styles/variables.scss";
+
+.friends-suggestion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: $white;
+  border-radius: 8px;
+
+  & > h1 {
+    font-size: 18px;
+    color: $black-800;
+    font-weight: 500;
+  }
+
+  & > p {
+    font-size: 14px;
+  }
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.friends-suggestion__item {
+  & > button {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    border-radius: 8px;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 2px 8px;
+
+    &:hover {
+      background-color: $black-100;
+    }
+  }
+
+  & h2 {
+    font-size: 14px;
+    color: $black-800;
+    font-weight: 500;
+    text-align: start;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: start;
+  }
+
+  & p {
+    font-size: 12px;
+    color: $black-600;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: start;
+  }
+}
+
+.skeleton-friends-suggestion__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-friends-suggestion {
+  display: flex;
+  gap: 8px;
+
+  & > div:last-child {
+    width: 100%;
+  }
+}

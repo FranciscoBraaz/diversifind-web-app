@@ -1,0 +1,24 @@
+.accessibility-button {
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  margin-top: -65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(49, 135, 241);
+  z-index: 10;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  margin-right: 11px;
+
+  & > svg {
+    width: 35px;
+    height: 35px;
+
+    & > path {
+      fill: white !important;
+    }
+  }
+}

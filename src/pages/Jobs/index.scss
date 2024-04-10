@@ -1,0 +1,156 @@
+@import "../../styles/variables.scss";
+
+.jobs {
+  width: 100%;
+}
+
+.jobs-container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.jobs__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.jobs__container-search-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.jobs__mobile-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.jobs__filters-button {
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobs__job-card-container {
+  width: 100%;
+  background-color: $white;
+  border-radius: 8px 8px 0px 0px;
+  padding: 16px;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1 {
+      font-size: 18px;
+      color: $black-800;
+      font-weight: 500;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.jobs__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.jobs__divider {
+  width: 100%;
+  height: 1px;
+  background-color: $black-400;
+  margin: 16px 0px;
+}
+
+.jobs__skeleton-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.skeleton-job-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+
+  &:not(.skeleton-job-card--last) {
+    border-bottom: 1px solid $black-200;
+  }
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+
+    & > div:first-child {
+      width: 100%;
+    }
+  }
+}
+
+.skeleton-job-card__inner-header-container {
+  width: 100%;
+
+  & > div {
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (max-width: $screen-xl) {
+  .jobs-container {
+    padding: 24px 16px;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../styles/variables.scss";
+
+.uncontrolled-textarea__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: $black-800;
+  }
+}
+
+.uncontrolled-textarea-container {
+  display: grid;
+  // overflow: auto;
+  height: 100%;
+  border: 1px solid $secondary-xsm;
+  border-radius: 4px;
+
+  & > label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: $secondary-default;
+  }
+
+  &--focused {
+    border: 1px solid $main-default;
+  }
+
+  &--error {
+    border: 1px solid $error-default;
+  }
+}
+
+.uncontrolled-textarea-container::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) " ";
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+
+.uncontrolled-textarea-container > textarea,
+.uncontrolled-textarea-container::after {
+  /* Identical styling required!! */
+  resize: none;
+  border: none;
+  font-family: "Roboto";
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0.25px;
+  color: $black-700;
+  overflow: auto;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 400;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.uncontrolled-textarea-container *:disabled {
+  background-color: $black-200;
+}
+
+.uncontrolled-textarea {
+  &::placeholder {
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0.25px;
+    color: $black-500;
+  }
+}
+
+.uncontrolled-textarea__error-message {
+  color: $error-lg;
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+  margin-bottom: -8px;
+}

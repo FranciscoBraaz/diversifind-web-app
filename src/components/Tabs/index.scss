@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: fit-content;
+  width: fit-content;
+
+  background-color: $black-200;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tabs__tab-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  height: fit-content;
+
+  color: $text-primary;
+  font-size: 12px !important;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+
+  &--selected {
+    background-color: $white;
+  }
+
+  & > span {
+    // display: none;
+    white-space: nowrap;
+  }
+
+  & > svg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .tabs__tab-item {
+    padding: 8px;
+
+    & > span {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .tabs__tab-item {
+    padding: 8px 12px;
+  }
+}

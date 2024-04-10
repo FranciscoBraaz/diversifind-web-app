@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.step-progress {
+  display: flex;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $secondary-default;
+    border: 1px solid $main-default;
+    transition: background-color 0.3s ease-in-out;
+
+    &--active {
+      background-color: $main-default;
+      color: $white;
+    }
+  }
+
+  &__line {
+    width: 30px;
+    height: 2px;
+    background-color: $black-200;
+    transition: background-color 0.3s ease-in-out;
+
+    &--active {
+      background-color: $main-default;
+    }
+  }
+}

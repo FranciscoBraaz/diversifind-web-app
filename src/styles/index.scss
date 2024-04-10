@@ -1,0 +1,173 @@
+@import "reset.css";
+@import "variables.scss";
+
+:root {
+  --rc-focus-color: $main-default;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // scrollbar-gutter: stable both-edges;
+}
+
+body {
+  background-color: $white;
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $text-primary;
+  line-height: 1.35;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scrollbar-gutter: stable both-edges;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: $font-primary;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.35em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.35em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 15px;
+  line-height: 1.35em;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 1.35em;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  width: 90%;
+  max-width: 1280px;
+}
+
+.form__error-message {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  color: $error-default;
+  animation: fadeIn 0.2s ease;
+}
+
+.form__success-message {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  color: $main-default;
+  animation: fadeIn 0.2s ease;
+}
+
+@media (min-width: $screen-xl) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  button {
+    font-size: 14px !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.container-page {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+}
+
+.Toastify__toast--success {
+  background-color: $main-default !important;
+  color: $white;
+}
+
+.Toastify__toast--error {
+  background-color: #e5484d !important;
+  color: $white;
+}
+
+.Toastify__toast--info {
+  background-color: #0090ff !important;
+  color: $white;
+}

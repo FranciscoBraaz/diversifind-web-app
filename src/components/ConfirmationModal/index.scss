@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+
+.confirmation-modal__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+
+  & > h2 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: $black-800;
+  }
+
+  & > button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & > svg {
+      color: $black-600;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      & > svg {
+        color: $black-800;
+      }
+    }
+  }
+}
+
+.comment-delete-modal__content {
+  padding: 16px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: calc(100% - 16px);
+
+  & > p {
+    font-size: 16px;
+    line-height: 22.4px;
+    letter-spacing: 0.25px;
+    color: $black-800;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+  }
+}

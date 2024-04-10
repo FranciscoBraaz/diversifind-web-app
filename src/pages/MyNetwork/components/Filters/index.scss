@@ -1,0 +1,16 @@
+@import "../../../../styles/variables.scss";
+
+.my-network__filters {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > header {
+    & h5 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $black-800;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../styles/variables.scss";
+
+.configurations {
+  width: 100%;
+}
+
+.configurations__container {
+  width: 100%;
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+
+  & > section {
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: $white;
+
+    & > h1 {
+      font-size: 26px;
+      font-weight: 500;
+      color: $black-800;
+    }
+  }
+}
+
+.configurations__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  & > input {
+    height: 44px;
+    border: 1px solid #d0d5dd;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    color: #344054;
+    margin: 8px 0px;
+
+    &:disabled {
+      color: $black-500;
+    }
+  }
+}
+
+.configurations__container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.configurations__container-buttons {
+  display: flex;
+  gap: 16px;
+
+  & > button:last-child {
+    &:hover {
+      background-color: $error-default !important;
+      color: $white !important;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xl) {
+  .configurations__container {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .configurations__container-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    & > button {
+      width: 70% !important;
+      margin-left: unset !important;
+    }
+  }
+}

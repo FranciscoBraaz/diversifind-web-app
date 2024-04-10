@@ -1,0 +1,9 @@
+@import "../../../../styles/variables.scss";
+
+.about-section {
+  & > p {
+    font-size: 14px;
+    color: $black-700;
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.resend-code-timer {
+  color: $black-500;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+
+  &--active {
+    color: $main-default;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

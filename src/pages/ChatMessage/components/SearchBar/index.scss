@@ -1,0 +1,30 @@
+@import "../../../../styles/variables.scss";
+
+.coversation-search-bar {
+  background-color: $white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  gap: 8px;
+
+  & > input {
+    background-color: transparent;
+    border: none;
+    flex: 1;
+  }
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    color: $black-600;
+    transition: color 0.3s ease;
+    height: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: $black-800;
+    }
+  }
+}

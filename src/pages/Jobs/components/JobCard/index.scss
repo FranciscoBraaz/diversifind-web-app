@@ -1,0 +1,165 @@
+@import "../../../../styles/variables.scss";
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  & > header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.job-card__basic-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  & > h2 {
+    font-size: 18px;
+    color: $black-800;
+    font-weight: 500;
+    flex: 1;
+  }
+}
+
+.job-card__basic-info__left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.job-card__basic-info__container-date {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: fit-content;
+
+  & > p {
+    font-size: 14px;
+    color: $black-600;
+  }
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $black-200;
+    }
+
+    & > svg {
+      color: $black-700;
+    }
+  }
+}
+
+.job-card__company-info {
+  display: flex;
+  gap: 8px;
+  line-clamp: 1;
+}
+
+.job-card__company {
+  font-size: 14px;
+  color: $main-default;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 19px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  & > svg {
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  & > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.job-card__format {
+  font-size: 14px;
+  color: $black-700;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 19px;
+
+  & > svg {
+    color: $info-default;
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  & > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.job-card__description {
+  font-size: 14px;
+  color: $black-700;
+  font-weight: 400;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.job-card__footer {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.job-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.job-card__chip-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $screen-md) {
+  .job-card__company-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .job-card__basic-info__left .chip {
+    display: none;
+  }
+
+  .job-card__chip-mobile {
+    display: block;
+    margin-top: 4px;
+  }
+}

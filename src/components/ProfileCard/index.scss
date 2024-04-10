@@ -1,0 +1,85 @@
+@import "../../styles/variables.scss";
+
+.profile-card {
+  height: fit-content;
+  // max-height: 300px;
+  background-color: #fdfdfd;
+  width: 100%;
+  max-width: 275px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  & > img {
+    height: 80px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.profile-card__avatar {
+  width: fit-content;
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-card__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.profile-card__name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: $black-700;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+
+.profile-card__desc {
+  text-align: center;
+  font-size: 14px;
+  color: $black-700;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.profile-card__indicators {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $black-200;
+  margin-top: 16px;
+  padding-top: 16px;
+  gap: 4px;
+
+  & > li {
+    display: flex;
+    justify-content: space-between;
+
+    & > p {
+      font-size: 14px;
+      color: $black-700;
+    }
+
+    & > span {
+      font-size: 14px;
+      color: $main-default;
+    }
+  }
+}

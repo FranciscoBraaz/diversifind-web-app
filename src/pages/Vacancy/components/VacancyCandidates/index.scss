@@ -1,0 +1,136 @@
+@import "../../../../styles/variables.scss";
+
+.vacancy-candidates {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: unset !important;
+  background-color: $black-100 !important;
+}
+
+.vacancy-candidates__inner-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  gap: 16px;
+  padding: 16px;
+}
+
+.vacancy-candidates__candidate {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &--last {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $black-300;
+  }
+
+  & > header {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.vacancy-candidates__candidate__basic-info {
+  display: flex;
+  gap: 8px;
+  // max-width: 70%;
+
+  & h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black-800;
+  }
+
+  & p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black-600;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.vacancy-candidates__candidate-email {
+  font-size: 16px;
+  font-weight: 400;
+  color: $black-700;
+  line-height: 1.5;
+
+  & > strong {
+    color: $black-800;
+    font-weight: 500;
+  }
+}
+
+.vacancy-candidates__candidate-about {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-700;
+  line-height: 1.5;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.skeleton-candidates {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-candidate {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0px;
+  border-bottom: 1px solid $black-300;
+
+  &--isLast {
+    border-bottom: none;
+  }
+
+  &__header {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}
+
+.skeleton-candidate__user-info {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.skeleton-candidate__view-profile {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: $screen-md) {
+  .vacancy-candidates__candidate {
+    & > header {
+      flex-direction: column;
+    }
+  }
+
+  .skeleton-candidate {
+    &__header {
+      flex-direction: column;
+    }
+  }
+}

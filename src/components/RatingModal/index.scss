@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+.rating-modal__dialog-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 24px;
+  gap: 16px;
+
+  & > h2 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: $black-800;
+  }
+
+  & > button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & > svg {
+      color: $black-600;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      & > svg {
+        color: $black-800;
+      }
+    }
+  }
+}
+
+.rating-modal__dialog-content {
+  padding: 16px 24px;
+  height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  & > footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+  }
+}

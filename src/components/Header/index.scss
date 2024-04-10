@@ -1,0 +1,248 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: #fdfdfd; //#fdfdfd
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid $black-300;
+}
+
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $screen-xl;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & > span {
+    font-size: 20px;
+    font-weight: 600;
+    color: $secondary-default;
+  }
+
+  & > svg {
+    height: 40px;
+    width: auto;
+    min-height: 40px;
+  }
+}
+
+.header__user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & .dropdown__trigger {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > span:first-child {
+      font-size: 14px;
+      font-weight: 500;
+      color: $black-800;
+    }
+
+    & > span:last-child {
+      font-size: 12px;
+      font-weight: 400;
+      color: $black-600;
+    }
+  }
+}
+
+.header__user-info__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  & .dropdown__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0px;
+    border-radius: 8px;
+    padding: 4px 8px;
+    transition: background-color 0.3s ease;
+
+    & > span {
+      font-size: 15px;
+      color: $black-600;
+      transition: color 0.2s ease;
+    }
+
+    & svg {
+      min-width: 35px;
+      min-height: 35px;
+      width: 35px;
+      height: 35px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $info-xsm;
+
+      & > span {
+        color: $info-xlg;
+      }
+    }
+  }
+}
+
+.header__user-info__contrast {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  padding: 4px 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $black-100;
+  }
+
+  & > span {
+    font-size: 14px;
+    color: $black-800;
+  }
+}
+
+.menu-button {
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__settings-button,
+.header__help-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $black-100;
+  }
+
+  & > svg {
+    color: $black-700;
+  }
+}
+
+@media screen and (max-width: $screen-xxl) {
+  .header-container {
+    padding: 0px 16px;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .header__user-info__contrast {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .header__user-info__actions {
+    & .dropdown__trigger {
+      margin-right: 0;
+      padding: 0px !important;
+      width: fit-content !important;
+      height: fit-content !important;
+
+      & svg {
+        min-width: 40px;
+        min-height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .header__user-info {
+    .avatar {
+      width: 40px !important;
+      height: 40px !important;
+      min-height: 40px !important;
+      min-width: 40px !important;
+    }
+  }
+
+  .header__logo-container {
+    gap: 4px;
+
+    & > svg {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      min-width: 30px !important;
+    }
+
+    & > span {
+      font-size: 18px;
+    }
+  }
+
+  .header__user-info__text {
+    display: none;
+  }
+
+  .header__help-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .header__logo-container {
+    & > svg {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      min-width: 30px !important;
+    }
+
+    & > span {
+      font-size: 16px;
+    }
+  }
+
+  .menu-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .avatar {
+    width: 35px !important;
+    height: 35px !important;
+    min-height: 35px !important;
+    min-width: 35px !important;
+  }
+}

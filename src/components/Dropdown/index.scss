@@ -1,0 +1,123 @@
+@import "../../styles/variables.scss";
+
+.dropdown__trigger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown__content {
+  border-radius: 4px;
+  background: $white;
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 !important;
+}
+
+.dropdown__subtrigger {
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown__content__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $white;
+  color: $black-800;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  & > svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  & > span {
+    margin-top: 1px;
+  }
+}
+
+.dropdown-content[data-side="top"] {
+  animation-name: slideDownAndFade;
+}
+.dropdown-content[data-side="right"] {
+  animation-name: slideLeftAndFade;
+}
+.dropdown-content[data-side="bottom"] {
+  animation-name: slideUpAndFade;
+}
+.dropdown-content[data-side="left"] {
+  animation-name: slideRightAndFade;
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
